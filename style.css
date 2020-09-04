@@ -1,0 +1,605 @@
+/*
+ Theme Name:   Branch
+ Theme URI:
+ Description:  Branch Theme for Oregon State University. Ideal for using as a microsite or blog.
+ Author:       Kelly Holcomb
+ Author URI:   http://example.com
+ Template:     twentytwenty
+ Version:      1.0.0
+ License:      GNU General Public License v2 or later
+ License URI:  http://www.gnu.org/licenses/gpl-2.0.html
+ Tags:         Accessibility Ready, Custom Colors, Custom Logo, Custom Menu, Editor Style, Featured Images, Flexible Header, Footer Widgets, One Column, RTL Language Support, Sticky Post, Threaded Comments, Translation Ready
+ Text Domain:  branch
+*/
+
+/*TABLE OF CONTENTS
+
+1. FONT
+2. VARIABLES
+3. DOCUMENT SETUP
+4. HEADER
+5. MENU CUSTOMIZATION
+6. WIDGET AREAS
+7. HTML ELEMENTS
+8. SINGLE POST
+9. FOOTER STYLES
+10. CATEGORIES PAGE
+11. COLOR LIBRARY
+12. MEDIA QUERIES 
+
+
+*/
+
+/* 1. FONT */
+
+@font-face {
+    font-family: 'Stratum2WebBold';
+    src: url('fonts/Stratum2WebBold.woff2') format('woff2'),
+        url('fonts/Stratum2WebBold.woff') format('woff'),
+        url('fonts/Stratum2WebBold.svg#Stratum2-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* 2. VARIABLES */
+
+:root {
+    --beaver-orange: #d73f09;
+    --paddletail-black: #000;
+    --bucktooth-white: #fff;
+    --pine-stand: #4A773C;
+    --high-tide: #00859B;
+    --luminance: #FFB500;
+    --stratosphere: #006A8E;
+    --reindeer-moss: #C4D6A4;
+    --seafoam: #B8DDE1;
+    --candela: #FDD26E;
+    --moondust: #C6DAE7;
+    --hop-bine: #AA9D2E;
+    --rogue-wave: #0D5257;
+    --solar-flare: #D3832B;
+    --star-canvas: #003B5C;
+    --till: #B7A99A;
+    --coastline: #A7ACA2;
+    --high-desert: #7A6855;
+    --crater: #8E9089;
+    --dark: #1F1D1C;
+}
+
+/* 3. DOCUMENT SETUP*/
+
+body {
+    background-color: #f7f5f5;
+    color: var(--dark);
+    font-family: 'Open Sans', sans-serif;
+}
+
+body * {
+    font-family: 'Open Sans', sans-serif;
+}
+
+/*overrides authors from changing the background color*/
+body.custom-background {
+    background-color: #f7f5f5 !important;
+}
+
+/*sets background color for the bulk of the main element*/
+main#site-content {
+    background-color: #f7f5f5;
+}
+
+/*entry titles links are on the archive page*/
+.entry-title a {
+    color: var(--dark);
+}
+
+/*set selection colors*/
+::selection {
+    background-color: var(--beaver-orange);
+    color: var(--bucktooth-white);
+}
+
+/*link color*/
+a {
+    color: var(--beaver-orange);
+}
+
+/*link color for meta info*/
+.post-meta,
+.singular .entry-header .post-meta,
+.singular:not(.overlay-header) .entry-header .post-meta a {
+    color: var(--beaver-orange);
+}
+
+/*sets color for regular text so it can't be overriden*/
+.entry-content p {
+    color: var(--dark) !important;
+}
+
+/*set primary color to orange. if a author doesn't pick a color for a button, it will be orange*/
+:root .has-primary-background-color {
+    background-color: var(--beaver-orange);
+}
+
+/*pagination*/
+.pagination .dots {
+    color: var(--dark);
+}
+
+/*sets widget font to Open Sans*/
+.widget_text p,
+.widget_text ol,
+.widget_text ul,
+.widget_text dl,
+.widget_text dt,
+.widget-content .rssSummary {
+    font-family: 'Open Sans', sans-serif;
+}
+
+
+/* 4. HEADER */
+
+.header-inner {
+    align-items: flex-start;
+}
+
+/* sets header color to white*/
+header#site-header {
+    background-color: var(--bucktooth-white);
+}
+
+/*set color for header section of single entry to match main*/
+.singular .entry-header {
+    background-color: #f7f5f5;
+}
+
+/*logo size*/
+#site-header img {
+    margin: 0 auto;
+    height: 60px;
+    max-width: none;
+}
+
+/*center logo on mobile*/
+#site-logo img {
+    display: block;
+    margin: 0 auto;
+}
+
+/*spacing between site title and logo*/
+.header-titles .site-title {
+    margin: 2rem 0 0;
+}
+
+/*puts the site title on its own line*/
+#site-title,
+.site-title {
+    width: 100%;
+}
+
+/*sets color of site title*/
+.site-title a {
+    color: var(--dark);
+}
+
+/*lines up site title and site description with logo*/
+.header-titles .site-description {
+    margin: 1rem 0 0;
+}
+
+.site-description {
+    color: var(--beaver-orange)
+}
+
+/*wrapper for the headers and footers. sets baseline color as black. backgrounds are set to white or off white*/
+.header-footer-group {
+    color: var(--dark);
+}
+
+/*toggle colors*/
+.menu-modal .toggle,
+body:not(.overlay-header) #site-header .toggle,
+body:not(.overlay-header) .toggle-inner .toggle-text {
+    color: var(--dark);
+}
+
+/*search overlay background color*/
+.search-modal-inner {
+    color: var(--dark);
+    background-color: var(--bucktooth-white);
+}
+
+/*dividing line between menu and search icon in the header*/
+body:not(.overlay-header) .header-inner .toggle-wrapper::before {
+    background-color: var(--beaver-orange);
+}
+
+
+/* 5. MENU CUSTOMIZATION--all menus in all widget areas*/
+
+/*main menu background color*/
+body:not(.overlay-header) .primary-menu ul {
+    background-color: #fff;
+}
+
+body:not(.overlay-header) .primary-menu>li>a,
+body:not(.overlay-header) .primary-menu>li>.icon,
+.modal-menu a,
+.footer-menu a,
+.header-footer-group .color-accent-hover:hover,
+body:not(.overlay-header) .primary-menu ul {
+    color: var(--beaver-orange);
+}
+
+/*sets color for mobile menu. this class is also used with the desktop expanded menu (basically the one that looks mobile all the time) */
+.menu-modal,
+.menu-modal-inner {
+    background-color: var(--bucktooth-white);
+}
+
+/*border color for mobile menu. this class is also used with the desktop expanded menu (basically the one that looks mobile all the time) */
+.menu-modal nav * {
+    border-color: var(--beaver-orange);
+}
+
+
+/*Social Media Menu*/
+
+/*changes background color for social media icons*/
+.social-icons a,
+#site-footer button:not(.toggle),
+#site-footer .button,
+#site-footer .faux-button,
+#site-footer .wp-block-file__button,
+#site-footer input[type="button"],
+#site-footer input[type="reset"],
+#site-footer input[type="submit"] {
+    background-color: var(--beaver-orange);
+    color: var(--bucktooth-white);
+}
+
+/*hover style for social media buttons specifically*/
+.social-icons a:hover {
+    background-color: var(--paddletail-black);
+}
+
+/* Footer menu for social */
+.footer-social a {
+    background-color: var(--beaver-orange);
+}
+
+/* 7. HTML ELEMENTS */
+
+
+/*Headings*/
+
+/*reduces weight of individual post title and any h1 used*/
+.entry-title,
+h1 {
+    font-weight: 400;
+}
+
+/*FONTS FOR HTML ELEMENTS*/
+.entry-content h1,
+.entry-content h3,
+.entry-content h4,
+.entry-content h5,
+.entry-content h6,
+.entry-content cite,
+.entry-content figcaption,
+.entry-content table,
+.entry-content address,
+.entry-content .wp-caption-text,
+.entry-content .wp-block-file {
+    font-family: 'Open Sans', serif;
+}
+
+.entry-content h2 {
+    color: var(--beaver-orange);
+    font-family: 'Stratum2WebBold', sans-serif;
+    font-size: 4rem;
+}
+
+.entry-content h4,
+.entry-content h6 {
+    color: var(--beaver-orange);
+}
+
+
+/*Buttons*/
+button colors button,
+.button,
+.faux-button,
+.wp-block-button__link,
+.wp-block-button,
+.wp-block-file .wp-block-file__button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+    font-family: 'Open Sans', sans-serif;
+}
+
+.wp-block-button__link,
+.wp-block-button {
+    color: var(--bucktooth-white);
+
+}
+
+a.wp-block-button__link.has-bucktooth-white-background-color:hover, a.wp-block-button__link.has-neutral-grey-background-color:hover {
+    color: var(--paddletail-black);
+}
+
+/*changes color of the "Continue Reading" button*/
+.faux-button {
+    color: var(--bucktooth-white);
+    background-color: var(--beaver-orange);
+}
+
+/* Quotes */
+blockquote {
+    border-color: var(--beaver-orange);
+}
+
+/* Block: Pullquote */
+.wp-block-pullquote::before {
+    color: var(--beaver-orange);
+}
+
+/* Drop Cap Style */
+.has-drop-cap:not(:focus)::first-letter {
+    color: var(--beaver-orange);
+}
+
+/*Code and Keyboard Elements*/
+code,
+kbd {
+    background-color: var(--beaver-orange);
+    color: var(--dark);
+}
+
+/*Borders*/
+table *,
+pre,
+fieldset,
+input,
+textarea,
+table,
+hr {
+    border-color: var(--dark);
+}
+
+/*Colors for elements*/
+cite,
+figcaption,
+.wp-caption-text {
+    color: var(--dark);
+}
+
+/*HORIZONTAL RULE*/
+hr.styled-separator {
+    color: #696361;
+}
+
+
+/* 8. SINGLE POST */
+
+/*fixes background color issue around featured image on a single post when a author sets a custom background color. */
+.singular .featured-media::before {
+    background-color: #f7f5f5;
+}
+
+/*sets color for links in the header on a single post*/
+.singular:not(.overlay-header) .entry-header a {
+    color: var(--beaver-orange);
+}
+
+/*Comments*/
+.comment-reply-link {
+    background-color: var(--beaver-orange);
+}
+
+.comment-respond .logged-in-as {
+    color: var(--dark);
+}
+
+.comment-respond .comment-notes,
+.comment-metadata,
+.comment-reply-link {
+    color: var(--dark);
+}
+
+/* 9. FOOTER STYLES*/
+.footer-nav-widgets-wrapper {
+    background-color: var(--bucktooth-white);
+    border-color: transparent;
+}
+
+.footer-widgets a {
+    color: var(--beaver-orange);
+}
+
+.footer-widgets-outer-wrapper,
+#site-footer {
+    background-color: var(--bucktooth-white);
+    border-color: var(--dark);
+}
+
+/*sets the color for the border between the footer menu and any widgets in the footer widget area*/
+.footer-top {
+    border-color: var(--dark);
+}
+
+/*changes the color the 'to the top' link at the very bottom of the page*/
+.to-the-top {
+    color: var(--dark);
+}
+
+
+.header-footer-group pre,
+.header-footer-group fieldset,
+.header-footer-group input,
+.header-footer-group textarea,
+.header-footer-group table,
+.header-footer-group table *,
+.footer-top {
+    border-color: var(--beaver-orange);
+}
+
+
+/* 10. CATEGORIES PAGE*/
+/*sets background color for the header section that includes the category name*/
+.archive-header {
+    background-color: #f7f5f5;
+}
+
+.archive-header a {
+    color: var(--beaver-orange);
+}
+
+/*sets color for category label in the header of the category entry page*/
+.header-footer-group .color-accent {
+    color: var(--dark)
+}
+
+
+/* 11. COLOR LIBRARY
+See functions.php for color picker names. this feeds into the custom color picker library for authors
+This code must be below any other colors set in the theme. This allows authors to set custom colors while still overriding the default colors of the theme.
+*/
+
+.has-beaver-orange-color {
+    color: var(--beaver-orange);
+}
+
+.has-beaver-orange-background-color {
+    background-color: var(--beaver-orange);
+}
+
+.has-paddletail-black-color {
+    color: var(--paddletail-black);
+}
+
+.has-paddletail-black-background-color {
+    background-color: var(--paddletail-black);
+}
+
+.has-bucktooth-white-color {
+    color: var(--bucktooth-white);
+}
+
+.has-bucktooth-white-background-color {
+    background-color: var(--bucktooth-white);
+}
+
+.has-pine-stand-color {
+    color: var(--pine-stand);
+}
+
+.has-pine-stand-background-color {
+    background-color: var(--pine-stand);
+}
+
+.has-high-tide-color {
+    color: var(--high-tide);
+}
+
+.has-high-tide-background-color {
+    background-color: var(--high-tide);
+}
+
+.has-luminance-color {
+    color: var(--luminance);
+}
+
+.has-luminance-background-color {
+    background-color: var(--luminance);
+}
+
+.has-stratosphere-color {
+    color: var(--stratosphere);
+}
+
+.has-stratosphere-background-color {
+    background-color: var(--stratosphere);
+}
+
+.has-rogue-wave-color {
+    color: var(--rogue-wave);
+}
+
+.has-rogue-wave-background-color {
+    background-color: var(--rogue-wave);
+}
+
+.has-star-canvas-color {
+    color: var(--star-canvas);
+}
+
+.has-star-canvas-background-color {
+    background-color: var(--star-canvas);
+}
+
+.has-moon-dust-blue-color {
+    color: var(--moondust);
+}
+
+.has-moon-dust-blue-background-color {
+    background-color: var(--moondust);
+}
+
+.has-moss-green-color {
+    color: var(--reindeer-moss);
+}
+
+.has-moss-green-background-color {
+    background-color: var(--reindeer-moss);
+}
+
+.has-neutral-grey-color {
+    color: #e6e6e6;
+}
+
+.has-neutral-grey-background-color {
+    background-color: #e6e6e6;
+}
+
+
+/* 12. MEDIA QUERIES */
+@media (min-width: 700px) {
+    .entry-content h2 {
+        font-size: 5.5rem;
+    }
+}
+
+@media (min-width: 768px) {
+    #site-header img {
+        height: 80px;
+    }
+}
+
+@media(min-width: 1000px) {
+    /*makes the header wrapper for the logo and site title so that it can match the layout of other OSU sites*/
+    .header-inner{ 
+        max-width: 100%;
+    }
+
+    .header-titles {
+        margin: -18px 0 0 -30px;
+    }
+
+    /*makes site logo left aligned on homepapge*/
+    #site-logo img {
+        margin: 0;
+    }
+
+    /*makes logo full width to push the site title and description to their own lines*/
+    #site-logo {
+        width: 100%;
+    }
+
+    /*gets rid of margin set for mobile to give breathing room between logo and site title*/
+    .site-title {
+        margin: 1rem 0 0;
+    }
+}
