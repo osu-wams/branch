@@ -65,13 +65,7 @@ if ( function_exists( 'the_custom_logo' ) && get_theme_mod( 'custom_logo' ) ) :
 
 elseif ( is_front_page() || is_home() ) : ?>
 
-    <a href="https://oregonstate.edu/" id="site-logo"><img src="<?php echo get_stylesheet_directory_uri() ?>/logo.png"
-                                            alt="Oregon State University"></a>
 
-<?php else : ?>
-
-    <a href="https://oregonstate.edu/"><img src="<?php echo get_stylesheet_directory_uri() ?>/logo.png"
-                                            alt="Oregon State University"></a>
 
 <?php endif; ?>
 	<?php $blog_info = get_bloginfo( 'name' ); ?>

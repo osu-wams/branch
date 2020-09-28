@@ -415,6 +415,14 @@ hr.styled-separator {
     border-color: transparent;
 }
 
+#site-footer .section-inner {
+    align-items: end;
+}
+
+.footer-credits {
+    flex-wrap: wrap;
+}
+
 .footer-widgets a {
     color: var(--beaver-orange);
 }
@@ -590,7 +598,7 @@ This code must be below any other colors set in the theme. This allows authors t
 
     /*makes site logo left aligned on homepapge*/
     #site-logo img {
-        margin: 0;
+        margin: 0 0 10px;
     }
 
     /*makes logo full width to push the site title and description to their own lines*/

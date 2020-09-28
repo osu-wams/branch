@@ -11,12 +11,18 @@
  * @since Twenty Twenty 1.0
  */
 
+
+
+ 
 ?>
 			<footer id="site-footer" role="contentinfo" class="header-footer-group">
 
 				<div class="section-inner">
 
+
 					<div class="footer-credits">
+					<a href="https://oregonstate.edu/" id="site-logo"><img src="<?php echo get_stylesheet_directory_uri() ?>/logo.png"
+alt="Oregon State University"></a>
 
 						<p class="footer-copyright">&copy;
 							<?php
