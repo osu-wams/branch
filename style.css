@@ -140,10 +140,6 @@ a {
 
 /* 4. HEADER */
 
-.header-inner {
-    align-items: flex-start;
-}
-
 /* sets header color to white*/
 header#site-header {
     background-color: var(--bucktooth-white);
@@ -154,38 +150,10 @@ header#site-header {
     background-color: #f7f5f5;
 }
 
-/*logo size*/
-#site-header img {
-    margin: 0 auto;
-    height: 60px;
-    max-width: none;
-}
-
-/*center logo on mobile*/
-#site-logo img {
-    display: block;
-    margin: 0 auto;
-}
-
-/*spacing between site title and logo*/
-.header-titles .site-title {
-    margin: 2rem 0 0;
-}
-
-/*puts the site title on its own line*/
-#site-title,
-.site-title {
-    width: 100%;
-}
 
 /*sets color of site title*/
 .site-title a {
     color: var(--dark);
-}
-
-/*lines up site title and site description with logo*/
-.header-titles .site-description {
-    margin: 1rem 0 0;
 }
 
 .site-description {
@@ -419,6 +387,10 @@ hr.styled-separator {
     align-items: end;
 }
 
+#osu-logo {
+    width: 100%;
+}
+
 .footer-credits {
     flex-wrap: wrap;
 }
@@ -580,34 +552,4 @@ This code must be below any other colors set in the theme. This allows authors t
     }
 }
 
-@media (min-width: 768px) {
-    #site-header img {
-        height: 80px;
-    }
-}
 
-@media(min-width: 1000px) {
-    /*makes the header wrapper for the logo and site title so that it can match the layout of other OSU sites*/
-    .header-inner{ 
-        max-width: 100%;
-    }
-
-    .header-titles {
-        margin: -18px 0 0 -30px;
-    }
-
-    /*makes site logo left aligned on homepapge*/
-    #site-logo img {
-        margin: 0 0 10px;
-    }
-
-    /*makes logo full width to push the site title and description to their own lines*/
-    #site-logo {
-        width: 100%;
-    }
-
-    /*gets rid of margin set for mobile to give breathing room between logo and site title*/
-    .site-title {
-        margin: 1rem 0 0;
-    }
-}

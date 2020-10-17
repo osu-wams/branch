@@ -21,17 +21,17 @@
 
 
 					<div class="footer-credits">
-					<a href="https://oregonstate.edu/" id="site-logo"><img src="<?php echo get_stylesheet_directory_uri() ?>/logo.png"
+					<a href="https://oregonstate.edu/" id="osu-logo"><img src="<?php echo get_stylesheet_directory_uri() ?>/logo.png"
 alt="Oregon State University"></a>
 
-						<p class="footer-copyright">&copy;
+						<p class="footer-copyright">
+							<a href="https://oregonstate.edu/copyright">&copy;
 							<?php
 							echo date_i18n(
 								/* translators: Copyright date format, see https://www.php.net/date */
 								_x( 'Y', 'copyright date format', 'twentytwenty' )
 							);
-							?>
-							<a href="https://oregonstate.edu/copyright">Oregon State University</a>
+							?> Oregon State University</a>
 						</p><!-- .footer-copyright -->
 
 					</div><!-- .footer-credits -->
