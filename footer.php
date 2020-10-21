@@ -21,7 +21,7 @@
 
 
 					<div class="footer-credits">
-					<a href="https://oregonstate.edu/" id="osu-logo"><img src="<?php echo get_stylesheet_directory_uri() ?>/logo.png"
+					<a href="https://oregonstate.edu/" id="osu-logo"><img src="<?php echo get_stylesheet_directory_uri() ?>/logo.svg"
 alt="Oregon State University"></a>
 
 						<p class="footer-copyright">

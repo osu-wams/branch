@@ -24,8 +24,9 @@
 8. SINGLE POST
 9. FOOTER STYLES
 10. CATEGORIES PAGE
-11. COLOR LIBRARY
-12. MEDIA QUERIES 
+11. 404 PAGE
+12. COLOR LIBRARY
+13. MEDIA QUERIES 
 
 
 */
@@ -442,8 +443,13 @@ hr.styled-separator {
     color: var(--dark)
 }
 
+/*11. 404 PAGE */
 
-/* 11. COLOR LIBRARY
+.error404-content input.search-submit {
+    background-color: var(--beaver-orange);
+}
+
+/* 12. COLOR LIBRARY
 See functions.php for color picker names. this feeds into the custom color picker library for authors
 This code must be below any other colors set in the theme. This allows authors to set custom colors while still overriding the default colors of the theme.
 */
@@ -545,7 +551,7 @@ This code must be below any other colors set in the theme. This allows authors t
 }
 
 
-/* 12. MEDIA QUERIES */
+/* 13. MEDIA QUERIES */
 @media (min-width: 700px) {
     .entry-content h2 {
         font-size: 5.5rem;
