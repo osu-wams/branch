@@ -113,11 +113,6 @@ a {
     color: var(--beaver-orange);
 }
 
-/*sets color for regular text so it can't be overriden*/
-.entry-content p {
-    color: var(--dark) !important;
-}
-
 /*set primary color to orange. if a author doesn't pick a color for a button, it will be orange*/
 :root .has-primary-background-color {
     background-color: var(--beaver-orange);
@@ -324,7 +319,7 @@ blockquote {
 code,
 kbd {
     background-color: var(--beaver-orange);
-    color: var(--dark);
+    color: var(--bucktooth-white);
 }
 
 /*Borders*/
