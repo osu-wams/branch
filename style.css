@@ -92,7 +92,7 @@ main#site-content {
 
 /*entry titles links are on the archive page*/
 .entry-title a {
-	color: var(--dark);
+	color: var(--beaver-orange);
 }
 
 /*set selection colors*/
@@ -103,14 +103,14 @@ main#site-content {
 
 /*link color*/
 a {
-	color: var(--beaver-orange);
+	color: var(--dark);
 }
 
 /*link color for meta info*/
 .post-meta,
 .singular .entry-header .post-meta,
 .singular:not(.overlay-header) .entry-header .post-meta a {
-	color: var(--beaver-orange);
+	color: var(--dark);
 }
 
 /*set primary color to orange. if a author doesn't pick a color for a button, it will be orange*/
