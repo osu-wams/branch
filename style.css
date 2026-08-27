@@ -95,12 +95,6 @@ main#site-content {
 	color: var(--beaver-orange);
 }
 
-/*set selection colors*/
-::selection {
-	background-color: var(--beaver-orange);
-	color: var(--bucktooth-white);
-}
-
 /*link color*/
 a {
 	color: var(--dark);
