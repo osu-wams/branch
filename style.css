@@ -5,7 +5,7 @@
  * Author:       Kelly Holcomb
  * Author URI:   http://example.com
  * Template:     twentytwenty
- * Version:      1.0.1
+ * Version:      1.0.2
  * License:      GNU General Public License v2 or later
  * License URI:  http://www.gnu.org/licenses/gpl-2.0.html
  * Tags:         Accessibility Ready, Custom Colors, Custom Logo, Custom Menu, Editor Style, Featured Images, Flexible Header, Footer Widgets, One Column, RTL Language Support, Sticky Post, Threaded Comments, Translation Ready
@@ -92,25 +92,19 @@ main#site-content {
 
 /*entry titles links are on the archive page*/
 .entry-title a {
-	color: var(--dark);
-}
-
-/*set selection colors*/
-::selection {
-	background-color: var(--beaver-orange);
-	color: var(--bucktooth-white);
+	color: var(--beaver-orange);
 }
 
 /*link color*/
 a {
-	color: var(--beaver-orange);
+	color: var(--dark);
 }
 
 /*link color for meta info*/
 .post-meta,
 .singular .entry-header .post-meta,
 .singular:not(.overlay-header) .entry-header .post-meta a {
-	color: var(--beaver-orange);
+	color: var(--dark);
 }
 
 /*set primary color to orange. if a author doesn't pick a color for a button, it will be orange*/
